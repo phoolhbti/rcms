@@ -1,0 +1,9 @@
+<title data-sly-use.system="com.rpgm.online.services.SystemSettingsService">
+    ${properties.title || properties['jcr:title'] || resource.name} | ${system.blogName}
+</title>
+<!--/* include CSS */-->
+<sly data-sly-include="style.html" />
+<!--/* include meta tags */-->
+<sly data-sly-include="meta.html" />
+<!--/* include HEAD scripts */-->
+<sly data-sly-include="scripts_head.html" />

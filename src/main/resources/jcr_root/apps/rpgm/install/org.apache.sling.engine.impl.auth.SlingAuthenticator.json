@@ -1,0 +1,10 @@
+{
+    "jcr:primaryType": "sling:OsgiConfig",
+    "sling.auth.requirements": [
+      "/",
+      "-/etc/clientlibs/foundation",
+      "-/content/rpgm/assets",
+      "-/content/rpgm/blog",
+      "-/content/rpgm/login.html"
+    ]
+}

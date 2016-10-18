@@ -1,0 +1,79 @@
+<div data-sly-use.comments="com.rpgm.online.components.foundation.CommentsView" class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>${comments.count} Comments</h3>
+    </div>
+  </div>
+  <ul class="media-list" id="commentListContainer" data-sly-list.comment="${comments.comments}">
+    <li class="media" data-sly-attribute.data-comment-id="${comment.path}">
+      <div class="media-left">
+        <span class="glyphicon glyphicon-user comment-user" aria-hidden="true"></span>
+      </div>
+      <div class="media-body">
+        <h4 class="media-heading">${comment.author} <small>${comment.date} <a href="#" class="comment-reply">Reply</a></small></h4>
+        <p data-sly-text="${comment.comment}"></p>
+        <sly data-sly-list.reply="${comment.replies}">
+          <div class="media">
+            <div class="media-left">
+              <span class="glyphicon glyphicon-user comment-user" aria-hidden="true"></span>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading">${reply.author} <small>${reply.date} <a href="#" class="comment-reply">Reply</a></small></h4>
+              <p data-sly-text="${reply.comment}"></p>
+            </div>
+          </div>
+        </sly>
+      </div>
+    </li>
+  </ul>
+
+  <div class="row" id="addCommentContainer">
+    <div class="col-md-6">
+      <a href="#">Add Comment</a>
+    </div>
+  </div>
+  <div id="newCommentContainer">
+    <div class="row" id="commentForm">
+      <form method="POST" action="${resource.path}.comment.html">
+        <div class="col-md-6">
+          <div class="well">
+            <div class="row">
+              <div class="col-xs-12">
+                <h3>Post Comment</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                  <div class="form-group">
+                      <label for="comment-author-field">Name</label>
+                      <input type="text" id="comment-author-field" name="author" class="form-control">
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group">
+                  <label for="comment-content-field">Comment</label>
+                  <textarea class="form-control" id="comment-content-field" name="comment"></textarea>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="form-group">
+                  <div data-sly-resource="${@ resourceType='rpgm/components/foundation/recaptcha'}" data-sly-unwrap></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12">
+                <input type="hidden" name="reply-to-comment" id="reply-to-comment">
+                <button type="submit" class="btn btn-primary">Post</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

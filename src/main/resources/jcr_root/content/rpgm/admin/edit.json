@@ -1,0 +1,15 @@
+{
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType" : "rpgm/components/pages/adminPage",
+    "title" : "Edit Blog",
+    "jcr:content" : {
+        "mainContent" : {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType" : "rpgm/components/foundation/parsys",
+            "blogEdit" : {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType" : "rpgm/components/admin/blogEdit"
+            }
+        }
+    }
+}

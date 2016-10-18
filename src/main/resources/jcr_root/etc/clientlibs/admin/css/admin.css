@@ -1,0 +1,113 @@
+/* blogList */
+.table .column-small {
+  width: 50px;
+}
+
+/* assetList */
+.asset-thumbnail {
+  text-align: center;
+}
+
+.asset-thumbnail img{
+  height: 90px;
+}
+
+.asset-folder {
+  cursor: pointer;
+}
+
+.asset-folder .fa {
+  margin-top: 40px;
+  font-size: 50px;
+  color: #666;
+}
+
+.asset-upload {
+  border: dashed 1px green;
+}
+
+.asset-upload.hover {
+  background: lightgreen;
+}
+
+.asset-upload.hover-error {
+  background: indianred;
+}
+
+.asset-upload .fa {
+  color: green;
+  margin-top: 27px;
+}
+
+.breadcrumb li {
+  margin-right: 4px;
+}
+
+/* blogEdit */
+.keywords-add-container {
+  float: right;
+  margin-right: 14px;
+  margin-top: 4px;
+}
+
+.keywords-add-container i {
+  margin-left: 6px;
+}
+
+/* bootstrap modal scroll */
+.modal-dialog{
+  overflow-y: initial !important
+}
+
+.modal-body{
+  height: 250px;
+  overflow-y: auto;
+}
+
+.modal-body .thumbnail {
+  cursor: pointer;
+}
+
+.modal-body .thumbnail img {
+  height: 102px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* system config */
+#apacheSample .modal-body {
+  height: 60vh;
+}
+
+/* summernote */
+.note-toolbar {
+  margin-left: 0px !important;
+}
+
+.glyphicon.disabled {
+  cursor: not-allowed;
+  filter: alpha(opacity=65);
+  opacity: .65;
+}
+
+.glyphicon.disabled:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.disabled-container {
+  cursor: not-allowed !important;
+}
+
+.disabled-container a,
+.disabled-container img {
+  cursor: not-allowed !important;
+  filter: alpha(opacity=65);
+  opacity: .65;
+}
+
+.clear {
+  clear: both;
+}
