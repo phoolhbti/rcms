@@ -40,6 +40,11 @@ import org.slf4j.LoggerFactory;
 public class EditBlogPostServlet extends SlingAllMethodsServlet {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
      * The logger.
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(EditBlogPostServlet.class);

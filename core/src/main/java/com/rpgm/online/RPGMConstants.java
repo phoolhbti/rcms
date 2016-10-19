@@ -64,7 +64,7 @@ public final class RPGMConstants {
     public static final String EMAIL_CONFIG_PATH = ADMIN_CONFIG_PATH + "/email";
 
     /** Node type base */
-    private static final String NODE_TYPE = "publick";
+    private static final String NODE_TYPE = "rpgm";
 
     /** Page node type */
     public static final String NODE_TYPE_PAGE = NODE_TYPE + ":page";
@@ -79,7 +79,7 @@ public final class RPGMConstants {
     public static final String NODE_TYPE_COMMENT = NODE_TYPE + ":comment";
 
     /** Page base resource type */
-    private static final String PAGE_TYPE = "publick/pages";
+    private static final String PAGE_TYPE = "rpgm/pages";
 
     /** Admin page resource type */
     public static final String PAGE_TYPE_ADMIN = PAGE_TYPE + "/adminPage";
@@ -106,7 +106,7 @@ public final class RPGMConstants {
     public static final String SERVLET_PATH_ADMIN = "/bin/admin";
 
     /** Servlet public path */
-    public static final String SERVLET_PATH_PUBLIC = "/bin/publick";
+    public static final String SERVLET_PATH_PUBLIC = "/bin/rpgm";
 
     /** Password replacement text */
     public static final String PASSWORD_REPLACEMENT = "****************";

@@ -1,0 +1,11 @@
+{
+    "jcr:primaryType": "rpgm:page",
+    "sling:resourceType" : "rpgm/pages/baseHome",
+    "title" : "RPGM Home",
+    "jcr:content" : {
+        "mainContent" : {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType" : "rpgm/components/foundation/parsys"            
+        }
+    }
+}
