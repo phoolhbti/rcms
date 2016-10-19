@@ -1,0 +1,13 @@
+{
+    "jcr:primaryType": "sling:OsgiConfig",
+    "sling.auth.requirements": [
+      "/bin",
+      "-/bin/rpgm/sendmail",
+      "-/bin/rpgm/addcomment",
+      "/etc/clientlibs/admin",
+      "/content/admin",
+      "-/content/admin/login.html",
+      "/admin",
+      "-/admin/login.html"
+    ]
+}

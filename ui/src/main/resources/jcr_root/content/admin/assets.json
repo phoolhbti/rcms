@@ -1,0 +1,15 @@
+{
+    "jcr:primaryType": "rpgm:page",
+    "sling:resourceType" : "rpgm/pages/adminSecurePage",
+    "title" : "Assets",
+    "jcr:content" : {
+        "mainContent" : {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType" : "rpgm/components/foundation/parsys",
+            "assetList" : {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType" : "rpgm/components/admin/assetList"
+            }
+        }
+    }
+}

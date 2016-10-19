@@ -1,0 +1,123 @@
+<div class="row" data-ng-controller="SettingsController" data-settings-type="system"
+    data-sly-use.config="com.rpgm.online.components.admin.SystemConfig">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Settings</h3>
+            </div>
+            <div class="panel-body">
+                <form action="/bin/admin/systemconfig" method="post">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label>Extensionless URLS</label><br>
+                                <input type="checkbox" name="extensionlessUrls" value="true" data-ng-model="model.extensionlessUrls" data-ng-init="model.extensionlessUrls = ${config.extensionlessUrls}"> Enable extentionless URLs
+                                <span class="help-block">Enabling extensionless URLs will ensure that links are displayed correctly. The web server must still be setup to handle extensionless URLs through the proper rewrites and redirects. View <a href="#" data-toggle="modal" data-target="#apacheSample">sample Apache redirects</a>.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label>Blog name</label>
+                                <input type="text" name="blogName" data-ng-model="model.blogName" data-ng-init="model.blogName = '${config.blogName}'" class="form-control">
+                                <span class="help-block">The name of the blog to be used as titles and headers.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form-group">
+                                <label>System temporary direcotry</label>
+                                <input type="text" name="temporaryDirectory" data-ng-model="model.temporaryDirectory" data-ng-init="model.temporaryDirectory = '${config.temporaryDirectory}'" class="form-control" placeholder="/path-to-sling-server/tmp">
+                                <span class="help-block">The file system temporary directory where packages are created.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 form-group">
+                            <button type="submit" class="btn btn-primary" data-ng-click="save($event)" data-sly-attribute.disabled="${!config.authorable && 'disabled'}">Save</button>
+                        </div>
+                    </div>
+                    <div class="row" data-ng-show="status.show">
+                        <div class="col-xs-12">
+                            <div class="alert {{status.type}} alert-dismissible" role="alert">
+                                <button type="button" class="close" aria-label="Close" data-ng-click="hideAlert()"><span aria-hidden="true">&times;</span></button>
+                                <strong data-ng-bind="status.header"></strong> <span data-ng-bind="status.message"></span>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="apacheSample">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Sample Apache web server redirects</h4>
+      </div>
+      <div class="modal-body large">
+        <pre>
+&lt;IfModule mod_dir.c&gt;
+    DirectorySlash Off
+&lt;/IfModule&gt;
+
+&lt;IfModule mod_rewrite.c&gt;
+    RewriteEngine On
+
+    # Always use www
+    RewriteCond %{HTTP_HOST} !^www\.
+    RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Step 1: Redirect all paths that end in .html or slash.
+    # Redirect to remove index.html and /content. Hopefully
+    # you've provided the correct links so that you don't
+    # have to do any of these redirects.
+
+    # remove trailing slash
+    RewriteRule     ^(.+)/$ $1 [R=301,L,NC,QSA]
+
+    # remove content
+    RewriteRule     ^/content/(.*)$ /$1 [R=301,L,NC,QSA]
+
+    # Remove .html
+    # Condition needed for a bug in Sling 7. Updating a user group
+    # doesn't work when posting to JSON. While fixed in Sling 8, the
+    # admin JavaScript UserService#PATH_UPDATE_GROUP would need to be
+    # updated as well if you were going to use it. See readme.md.
+    RewriteCond     %{REQUEST_URI} !^/system/userManager/group/.+\.update.html [NC]
+    RewriteRule     (.*).html$ $1 [R=301,L,NC,QSA]
+
+    # remove /index
+    RewriteRule     (.*)/index $1 [R=301,L,NC,QSA]
+
+    # Step 2: Use a path through to do an internal rewrite rather
+    # than a 301 or 302 redirect. Add the .html extension back on
+    # so that Sling can resolve the resource with the correct
+    # renderer.
+
+    # Ending without a slash or extension, pass through to *.html
+    RewriteCond     %{REQUEST_URI} !.*/j_security_check [NC]
+    RewriteCond     %{REQUEST_URI} !^/bin [NC]
+    RewriteCond     %{REQUEST_URI} !^/etc [NC]
+    RewriteCond     %{REQUEST_URI} !^/assets [NC]
+    RewriteCond     %{REQUEST_URI} !.*\..*/?$ [NC]
+    RewriteCond     %{REQUEST_URI} !.*/$ [NC]
+    RewriteRule     (.*)$ $1.html [PT,L,NC,QSA]
+
+    # Ending with slash, pass through to index.html
+    RewriteCond     %{REQUEST_URI} .*/$ [NC]
+    RewriteRule     (.*)$ $1/index.html [PT,L,NC,QSA]
+&lt;/IfModule&gt;
+        </pre>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

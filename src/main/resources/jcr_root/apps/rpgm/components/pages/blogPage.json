@@ -1,4 +1,0 @@
-{
-    "jcr:primaryType" : "nt:unstructured",
-    "sling:resourceSuperType" : "rpgm/components/pages/page"
-}

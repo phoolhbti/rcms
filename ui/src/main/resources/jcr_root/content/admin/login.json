@@ -1,0 +1,15 @@
+{
+    "jcr:primaryType": "rpgm:page",
+    "sling:resourceType" : "rpgm/pages/adminPage",
+    "title" : "Login",
+    "jcr:content" : {
+        "mainContent" : {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType" : "rpgm/components/foundation/parsys",
+            "login" : {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType" : "rpgm/components/admin/login"
+            }
+        }
+    }
+}

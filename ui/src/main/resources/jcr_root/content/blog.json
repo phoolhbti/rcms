@@ -1,0 +1,21 @@
+{
+    "jcr:primaryType": "rpgm:page",
+    "sling:resourceType" : "rpgm/pages/basicPage",
+    "title" : "Blog List",
+    "jcr:content" : {
+        "mainContent" : {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType" : "rpgm/components/foundation/parsys",
+            "blogList" : {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType" : "rpgm/components/foundation/blogList",
+                "pageSize": 5
+            },
+            "pagination" : {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType" : "rpgm/components/foundation/blogPagination",
+                "pageSize": 5
+            }
+        }
+    }
+}

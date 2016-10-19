@@ -1,0 +1,64 @@
+{
+    "jcr:primaryType": "rpgm:page",
+    "sling:resourceType" : "rpgm/pages/adminSecurePage",
+    "system" : {
+        "jcr:primaryType": "rpgm:page",
+        "sling:resourceType" : "rpgm/pages/adminSecurePage",
+        "title" : "System Settings",
+        "jcr:content" : {
+            "mainContent" : {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType" : "rpgm/components/foundation/parsys",
+                "systemConfig" : {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType" : "rpgm/components/admin/systemConfig"
+                }
+            }
+        }
+    },
+    "email" : {
+        "jcr:primaryType": "rpgm:page",
+        "sling:resourceType" : "rpgm/pages/adminSecurePage",
+        "title" : "Email configuration",
+        "jcr:content" : {
+            "mainContent" : {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType" : "rpgm/components/foundation/parsys",
+                "emailConfig" : {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType" : "rpgm/components/admin/emailConfig"
+                }
+            }
+        }
+    },
+    "recaptcha" : {
+        "jcr:primaryType": "rpgm:page",
+        "sling:resourceType" : "rpgm/pages/adminSecurePage",
+        "title" : "reCAPTCHA configuration",
+        "jcr:content" : {
+            "mainContent" : {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType" : "rpgm/components/foundation/parsys",
+                "recaptchaConfig" : {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType" : "rpgm/components/admin/recaptchaConfig"
+                }
+            }
+        }
+    },
+    "akismet" : {
+        "jcr:primaryType": "rpgm:page",
+        "sling:resourceType" : "rpgm/pages/adminSecurePage",
+        "title" : "Akismet configuration",
+        "jcr:content" : {
+            "mainContent" : {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType" : "rpgm/components/foundation/parsys",
+                "akismetConfig" : {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType" : "rpgm/components/admin/akismetConfig"
+                }
+            }
+        }
+    }
+}
