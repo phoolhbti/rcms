@@ -40,6 +40,7 @@
                         <Sling-Nodetypes>SLING-INF/nodetypes/nodetypes.cnd</Sling-Nodetypes>
                         <Sling-Initial-Content>
                             jcr_root/libs;overwrite:=true;uninstall:=true;path:=/libs,
+                            jcr_root/apps;overwrite:=true;uninstall:=true;path:=/apps,
                             jcr_root/etc/clientlibs;overwrite:=true;uninstall:=true;path:=/etc/clientlibs,
                             jcr_root/content/admin;overwrite:=true;uninstall:=true;path:=/content/admin,
                             jcr_root/content/assets;overwrite:=false;uninstall:=false;path:=/content/assets,

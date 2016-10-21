@@ -3,8 +3,8 @@ package com.rpgm.online.use;
 import org.apache.jackrabbit.spi.commons.name.NameConstants;
 import org.apache.sling.api.resource.Resource;
 
-import com.rpgm.online.models.Footer;
 import com.rpgm.online.sightly.WCMUse;
+import com.rpgm.online.site.Footer;
 
 public class FooterUse extends WCMUse{
 

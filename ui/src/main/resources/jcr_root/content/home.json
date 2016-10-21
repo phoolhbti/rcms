@@ -1,11 +1,23 @@
 {
     "jcr:primaryType": "rpgm:page",
-    "sling:resourceType" : "rpgm/pages/baseHome",
+    "sling:resourceType" : "site/pages/home",
     "title" : "RPGM Home",
     "jcr:content" : {
         "mainContent" : {
             "jcr:primaryType": "nt:unstructured",
-            "sling:resourceType" : "rpgm/components/foundation/parsys"            
+            "sling:resourceType" : "rpgm/components/foundation/parsys",
+            "footer" : {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType" : "rpgm/components/foundation/parsys",
+                "copyright" : {
+		                "jcr:primaryType": "nt:unstructured",
+		                "sling:resourceType" : "site/components/common/copyright",
+		                "name":"RPGM",
+		                "url" : "http://rpgmonline.com",
+		                "copyrightText":" Copyright &copy; All Rights Reserved",
+		                "initalText" :"Designed by "
+                }
+            }           
         }
     }
 }

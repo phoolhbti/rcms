@@ -1,0 +1,4 @@
+{
+    "jcr:primaryType" : "rpgm:component",
+    "sling:resourceSuperType" : "site/pages/base"
+}
