@@ -24,6 +24,7 @@ public class CopyRight extends WCMUse {
 	}
 
 	private void getCopyRight(Resource copynode) {
+		copynode=copynode.getChild("jcr:content/mainContent/footer/copyright");
 		ValueMap properties = copynode.adaptTo(ValueMap.class);
 		name = properties.get("name", String.class);
 		url = properties.get("url", String.class);

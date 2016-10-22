@@ -34,6 +34,7 @@ public class Footer {
     // Our list of social media links
     @Inject @Optional
     private Resource social;
+    
     public List<Link> socialLinks;
 
     @PostConstruct

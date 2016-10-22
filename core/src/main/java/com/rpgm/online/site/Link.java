@@ -12,4 +12,14 @@ public class Link {
 
     @Inject
     public String url;
+    
+    public String getName() {
+		return name;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	
 }

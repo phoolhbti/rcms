@@ -14,7 +14,7 @@ import org.apache.sling.models.annotations.Model;
 @Model(adaptables=Resource.class)
 public class FooterColumn {
     @Inject
-    public String header;
+    public String title;
 
     @Inject @Named("links")
     private Resource linksResource;

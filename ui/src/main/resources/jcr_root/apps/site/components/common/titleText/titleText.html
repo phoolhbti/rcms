@@ -1,0 +1,13 @@
+<div class="col-ld-3  col-md-3 col-sm-3" data-sly-use.titleText="com.rpgm.online.site.TitleText">
+	<div class="single_footer_widget">
+		<h3>${titleText.title}</h3>
+		<p>${titleText.description}</p>
+	</div>
+	<div ng-controller="Ctrl">
+      <!-- editable element -->
+      <a href="#" editable-text="user.name">{{ user.name || "empty" }}</a>
+      <div id="debug" style="margin-top: 30px">
+      {{ user | json }}
+      </div>
+    </div>
+</div>
