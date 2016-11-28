@@ -152,65 +152,57 @@
 		                		"jcr:primaryType": "nt:unstructured",
 		                		"sling:resourceType" : "site/components/common/titleLink",
 		                		"title": "Social Links",
+		                		"social": true,
 		                		"link1" : {
 			                		"jcr:primaryType": "nt:unstructured",
 			                		"sling:resourceType" : "site/components/common/link",
-			                		"name":"ABOUT US",
-			                		"url" :"http://rpgmonline.com",
+			                		"name":"Facebook",
+			                		"url" :"http://facebook.com",
 			                		"blank": "true",
 			                		"cssClass" :"",
 			                		"dataPlacement" :"top",
-			                		"socialCssClass":""
+			                		"socialCssClass":"fa fa-facebook"
 			                		},
-			                 "link1" : {
-			                		"jcr:primaryType": "nt:unstructured",
-			                		"sling:resourceType" : "site/components/common/link",
-			                		"name":"News &amp; Media",
-			                		"url" :"http://rpgmonline.com",
-			                		"blank": "true",
-			                		"cssClass" :"",
-			                		"dataPlacement" :"top",
-			                		"socialCssClass":""
-			                		},
+			                 
 		                		"link2" : {
 			                		"jcr:primaryType": "nt:unstructured",
 			                		"sling:resourceType" : "site/components/common/link",
-			                		"name":"Forum",
+			                		"name":"Twitter",
 			                		"url" :"http://rpgmonline.com",
 			                		"blank": "true",
 			                		"cssClass" :"",
 			                		"dataPlacement" :"top",
-			                		"socialCssClass":""
+			                		"socialCssClass":"fa fa-twitter"
 			                		},
 		                		"link3" : {
 			                		"jcr:primaryType": "nt:unstructured",
 			                		"sling:resourceType" : "site/components/common/link",
-			                		"name":"Our Team",
+			                		"name":"Google+",
 			                		"url" :"http://rpgmonline.com",
 			                		"blank": "true",
 			                		"cssClass" :"",
 			                		"dataPlacement" :"top",
-			                		"socialCssClass":""
+			                		"socialCssClass":"fa fa-google-plus"
 			                		},
 		                		"link4" : {
 			                		"jcr:primaryType": "nt:unstructured",
 			                		"sling:resourceType" : "site/components/common/link",
-			                		"name":"Our Students",
+			                		"name":"Linkedin",
 			                		"url" :"http://rpgmonline.com",
 			                		"blank": "true",
 			                		"cssClass" :"",
 			                		"dataPlacement" :"top",
-			                		"socialCssClass":""
+			                		"socialCssClass":"fa fa-linkedin"
 			                		},
 		                		"link5" : {
 			                		"jcr:primaryType": "nt:unstructured",
 			                		"sling:resourceType" : "site/components/common/link",
-			                		"name":"Our Tutors",
+			                		"name":"Youtube",
 			                		"url" :"http://rpgmonline.com",
 			                		"blank": "true",
 			                		"cssClass" :"",
 			                		"dataPlacement" :"top",
-			                		"socialCssClass":""
+			                		"socialCssClass":"fa fa-youtube"
 			                		}
 		                }
                 },

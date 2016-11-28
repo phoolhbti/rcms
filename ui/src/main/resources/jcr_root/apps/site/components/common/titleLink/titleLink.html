@@ -3,8 +3,11 @@
 
 	<div class="single_footer_widget">
 		<h3>${titleLink.title}</h3>
-		<ul class="footer_widget_nav" data-sly-list.ulist="${titleLink.links}">
-			<li><a href="#">${ulist.name}</a></li>			
+		<ul class="footer_widget_nav" data-sly-test="${!titleLink.social}" data-sly-list.ulist="${titleLink.links}">
+			<li><a href="${ulist.url}">${ulist.name}</a></li>			
+		</ul>
+		<ul class="footer_social" data-sly-test="${titleLink.social}" data-sly-list.ulist="${titleLink.links}">
+			<li><a href="${ulist.url}" data-toggle="tooltip" data-placement="top" title="${ulist.name}" class="soc_tooltip"><i class="${ulist.socialCssClass}"></i></a></li>			
 		</ul>
 	</div>
 </div>

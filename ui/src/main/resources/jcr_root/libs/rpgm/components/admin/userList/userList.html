@@ -46,6 +46,31 @@
                         </div>
                     </div>
                 </div>
+<!-- added new field for user profile -->
+				 <div class="row" data-ng-show="isPass || isNew">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            <label>About Me</label>
+                            <input type="textarea" name="aboutMe" class="form-control" data-ng-model="aboutMe">
+                        </div>
+                    </div>
+                </div>
+				<div class="row" data-ng-show="isPass || isNew">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            <label>Designation</label>
+                            <input type="text" name="designation" class="form-control" data-ng-model="designation">
+                        </div>
+                    </div>
+                </div>
+				<div class="row" data-ng-show="isPass || isNew">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            <label>Department</label>
+                            <input type="text" name="department" class="form-control" data-ng-model="department">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="modal-footer">

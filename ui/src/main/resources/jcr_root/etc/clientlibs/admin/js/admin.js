@@ -724,7 +724,7 @@ $(function(){
 /**
  * The Angular module for the rpgm administrative functions.
  */
-var app = angular.module('rpgm', ['ngFileUpload', 'ui.bootstrap','xeditable']);
+var app = angular.module('rpgm', ['ngFileUpload', 'ui.bootstrap']);
 /**
  * Angular controller for adding and removing keywords/tags while editing blog
  * posts. Works with /libs/rpgm/components/admin/blogEdit component.

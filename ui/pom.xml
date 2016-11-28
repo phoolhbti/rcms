@@ -39,13 +39,13 @@
                     <instructions>
                         <Sling-Nodetypes>SLING-INF/nodetypes/nodetypes.cnd</Sling-Nodetypes>
                         <Sling-Initial-Content>
-                            jcr_root/libs;overwrite:=true;uninstall:=true;path:=/libs,
-                            jcr_root/apps;overwrite:=true;uninstall:=true;path:=/apps,
-                            jcr_root/etc/clientlibs;overwrite:=true;uninstall:=true;path:=/etc/clientlibs,
-                            jcr_root/content/admin;overwrite:=true;uninstall:=true;path:=/content/admin,
-                            jcr_root/content/assets;overwrite:=false;uninstall:=false;path:=/content/assets,
+                            jcr_root/libs/rcms;overwrite:=true;uninstall:=true;path:=/libs/rcms,
+                            jcr_root/apps/rcms;overwrite:=true;uninstall:=true;path:=/apps/rcms,
+                            jcr_root/etc/clientlibs/rcms;overwrite:=true;uninstall:=true;path:=/etc/clientlibs/rcms,
+                            jcr_root/content/rcms/admin;overwrite:=true;uninstall:=true;path:=/content/rcms/admin,
+                            jcr_root/content/rcms/assets;overwrite:=false;uninstall:=false;path:=/content/rcms/assets,
                             jcr_root/content;overwrite:=false;overwriteProperties:=true;uninstall:=false;path:=/content,
-                            jcr_root/content/comments;overwrite:=false;uninstall:=false;path:=/content/comments,
+                            jcr_root/content/rcms/comments;overwrite:=false;uninstall:=false;path:=/content/rcms/comments,
                             jcr_root-ignore-import/libs/sling/xss;overwrite:=true;uninstall:=true;ignoreImportProviders:="json,xml";path:=/libs/sling/xss
                         </Sling-Initial-Content>
                     </instructions>
@@ -61,8 +61,8 @@
                             <goal>install-node-and-npm</goal>
                         </goals>
                         <configuration>
-                            <nodeVersion>v0.12.1</nodeVersion>
-                            <npmVersion>1.4.9</npmVersion>
+                            <nodeVersion>v4.6.0</nodeVersion>
+                            <npmVersion>3.3.12</npmVersion>
                         </configuration>
                     </execution>
                     <execution>
